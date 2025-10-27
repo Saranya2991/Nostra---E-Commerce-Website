@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOSTRA</title>
+    <!--Tailwind CSS CDN Link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <!--Link Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="collection.css">
+</head>
+
+<body>
+
+
+     <!--Responsive Design navbar-->
+    <nav class="bg-pink-700 p-3 flex items-center justify-between shadow-2xl sticky top-0 z-10">
+        <h1 class="text-5xl text-white">NOSTRA</h1>
+
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 md:hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <ul id="menu" class="gap-5 flex">
+            <li class="flex gap-3 text-white hover:text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                </svg>
+                <button><a class="hover:underline  hover:text-black" href="index.html">Home</a></button>
+            </li>
+            <li class="flex gap-3 text-white hover:text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                </svg>
+                <button><a class="hover:underline  hover:text-black" href="collection.html">Collection</a></button>
+            </li>
+            <li class="flex gap-3 text-white hover:text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+                <button><a class="hover:underline hover:text-black" href="contact.html">Contact</a></button>
+            </li>
+        </ul>
+    </nav>
+    <!--Side navbar-->
+    <section id="sidenav" class="bg-pink-700 fixed z-20 top-0 transition-all duration-1000"
+        style="width: 30%; height: 100vh; right: -50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-white">
+            <li>
+                <a class="hover:underline  hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline  hover:text-black" href="collection.html">Collection</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </section>   
+    <!--filter-->
+
+    <div class="container">
+  <aside>
+    <h3>Search</h3>
+    <input type="text" id="search" placeholder="Search clothes">
+
+    <h3>Category</h3>
+    <label><input type="checkbox" class="filter" value="Shirt"> Shirt</label>
+    <label><input type="checkbox" class="filter" value="T-shirt"> T-shirt</label>
+    <label><input type="checkbox" class="filter" value="Jacket"> Jacket</label>
+  </aside>
+
+  <main>
+    <!-- Products written directly in HTML -->
+    <div class="product" data-category="Shirt">
+      <img src="./Images/n1.jpeg" alt="Shirt">
+      <h4>Zara White Shirt</h4>
+      <p>Category: Shirt</p>
+    </div>
+
+    <div class="product" data-category="T-shirt">
+      <img src="./Images/n2.jpeg" alt="T-shirt">
+      <h4>Levis Denim T-shirt</h4>
+      <p>Category: T-shirt</p>
+    </div>
+
+    <div class="product" data-category="Jacket">
+      <img src="./Images/n3.jpeg" alt="Jacket">
+      <h4>H&M Blue Jacket</h4>
+      <p>Category: Jacket</p>
+    </div>
+
+    <div class="product" data-category="Shirt">
+      <img src="./Images/n4.jpeg" alt="Shirt">
+      <h4>Levis Checked Shirt</h4>
+      <p>Category: Shirt</p>
+    </div>
+
+    <div class="product" data-category="T-shirt">
+      <img src="./Images/n5.jpeg" alt="T-shirt">
+      <h4>Zara Black T-shirt</h4>
+      <p>Category: T-shirt</p>
+    </div>
+
+    <div class="product" data-category="Jacket">
+      <img src="./Images/n5.jpeg" alt="Jacket">
+      <h4>Zara Denim Jacket</h4>
+      <p>Category: Jacket</p>
+    </div>
+
+    <div class="product" data-category="Shirt">
+      <img src="./Images/n6.jpeg" alt="Shirt">
+      <h4>H&M Polo Shirt</h4>
+      <p>Category: Shirt</p>
+    </div>
+
+    <div class="product" data-category="T-shirt">
+      <img src="./Images/n7.jpeg" alt="T-shirt">
+      <h4>H&M Slim T-shirt</h4>
+      <p>Category: T-shirt</p>
+    </div>
+
+    <div class="product" data-category="Jacket">
+      <img src="./Images/n8.jpeg" alt="Jacket">
+      <h4>Levis Hoodie Jacket</h4>
+      <p>Category: Jacket</p>
+    </div>
+
+    <div class="product" data-category="Shirt">
+      <img src="./Images/n1.jpeg" alt="Shirt">
+      <h4>Zara Casual Shirt</h4>
+      <p>Category: Shirt</p>
+    </div>
+  </main>
+</div>     
+
+<!--News Letter-->
+        <section class="text-center mt-15">
+            <h1 class="text-3xl font-bold mt-20 text-center">Join our News Letter</h1>
+            <p>Signup for our email newspapper to get exclusive discounts, updates, and more</p>
+            <input type="text" class="border border-black p-2 m-3" style="width: 80%;">
+            <br>
+            <button class="bg-pink-700 rounded-xl font-bold text-white p-3 m-1">Suscribe</button>
+        </section>
+
+        <!--Footer-->
+        <section class="bg-gray-200 p-10 flex flex-col gap-5 mt-10">
+            <h1 class="text-4xl font-bold">Nostra</h1>
+            <p>The Standard chunk of Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis soluta
+                similique doloribus illum sint!.</p>
+            <p>@ 2023 Nostra.com</p>
+        </section>
+        <script src="collection.js">
+
+        </script>
+</body>
+
+</html>
